@@ -17,14 +17,11 @@ class RunningShoes::CLI
     input = nil 
     while input != "exit"
       input = gets.strip.downcase
-      case input 
-      when "1"
-        puts "I'd like more information on shoe 1!"
-      when  "2"
-        puts "I'd like more information on shoe 2!"
-        when "list"
+      if input.to_i > 0 
+        puts @shoes[input.to_i-1]
+        elsif input == "list"
           list_shoes
-        else
+        else 
           puts "Input does not exist, please type list or exit."
       end
     end 
