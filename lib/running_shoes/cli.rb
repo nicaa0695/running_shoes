@@ -10,6 +10,10 @@ class RunningShoes::CLI
   def list_shoes
     puts "Take a look at these awesome running shoes:"
     @shoes = RunningShoes::Shoes.all
+    @shoes.each.with_index(1) do |shoe, i|
+      puts "#{i}. #{shoe.name} - #{shoe.price} - #{shoe.availability}" 
+    end
+      
   end
   
   def menu
@@ -18,7 +22,8 @@ class RunningShoes::CLI
     while input != "exit"
       input = gets.strip.downcase
       if input.to_i > 0 
-        puts @shoes[input.to_i-1]
+        the_shoe = @shoes[input.to_i-1]
+        puts "#{the_shoe.name} - #{the_shoe.price} - #{the_shoe.availability}"
         elsif input == "list"
           list_shoes
         else 
