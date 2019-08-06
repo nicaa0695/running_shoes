@@ -7,12 +7,18 @@ class RunningShoes::Shoes
   
   def self.scrape_shoes
     shoes = []
+    shoes << self.scrape_adidas
     #got to adidas, finf the product
     #extract the properties
     #instantiate a shoe
     
     shoes
   end 
+  
+  def self.scrape_adidas
+    doc = Nokogiri::HTML(open("https://www.adidas.com/us/women-running-shoes"))
+    binding.pry 
+  end
   
 end 
 
