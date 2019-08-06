@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/running_shoes'
+require "bundler/setup"
+require "running_shoes"
 
 RunningShoes::CLI.new.call

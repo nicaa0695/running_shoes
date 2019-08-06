@@ -2,7 +2,6 @@ class RunningShoes::Shoes
   attr_accessor :name, :price, :availability, :url
   def self.all 
     # I should return a bunch of instances of Shoes 
-    puts "Take a look at these awesome running shoes:"
    
     shoe_1 = self.new
     shoe_1.name = "Duramo 9 Shoes"
