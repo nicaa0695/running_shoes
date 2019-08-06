@@ -16,8 +16,9 @@ class RunningShoes::Shoes
   end 
   
   def self.scrape_adidas
-    doc = Nokogiri::HTML(open("https://www.adidas.com/us/women-running-shoes"))
-    binding.pry 
+    doc = HTTParty.get("https://www.adidas.com/us/women-running-shoes")
+    @parse_page ||= Nokogiri::HTML(doc)
+     
   end
   
 end 
