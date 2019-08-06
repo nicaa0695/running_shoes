@@ -8,7 +8,7 @@ class RunningShoes::CLI
   end
   
   def list_shoes
-    
+    puts "Take a look at these awesome running shoes:"
     @shoes = RunningShoes::Shoes.all
   end
   
