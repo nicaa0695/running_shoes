@@ -13,6 +13,7 @@ class RunningShoes::CLI
       1. Duramo 9 Shoes - $65 - In stock!
       2. Ultraboost 19 Shoes - $180 - In stock!
     DOC
+    @shoes = RunningShoes::Shoes.all
   end
   
   def menu
