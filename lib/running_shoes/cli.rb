@@ -4,6 +4,7 @@ class RunningShoes::CLI
   def call 
     list_shoes
     menu
+    goodbye
   end
   
   def list_shoes
@@ -15,6 +16,19 @@ class RunningShoes::CLI
   end
   
   def menu
-    puts "Enter the number of the shoe you want more information about:"
+    puts "Enter the number of the shoe you want more information about or type exit to enter:"
+    input = nil 
+    while input != "exit"
+      input = gets.strip.downcase
+      case input 
+      when "1"
+        puts "I'd like more information on shoe 1!"
+      when  "2"
+        puts "I'd like more information on shoe 2!"
+      end
+    end 
   end
+  def goodbye
+    puts "See you soon, during your next shopping spree!"
+  end 
 end
