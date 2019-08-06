@@ -1,6 +1,2 @@
-require "running_shoes/version"
-
-module RunningShoes
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "running_shoes/version"
+require_relative './running_shoes/cli'

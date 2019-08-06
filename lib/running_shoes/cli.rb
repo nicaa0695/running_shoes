@@ -1,3 +1,4 @@
+#CLI Controller/User Interactions
 class RunningShoes::CLI
   
   def call 
