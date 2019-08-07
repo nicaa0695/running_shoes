@@ -13,6 +13,8 @@ class RunningShoes::Shoes
     shoes << self.scrape_armour
     shoes << self.scrape_balance
     shoes << self.scrape_asics
+    shoes << self.scrape_under
+    shoes << self.scrape_puma1
     shoes
   end 
   
@@ -81,5 +83,41 @@ class RunningShoes::Shoes
       shoe.description = doc.search("#ProductDescription").text.gsub("\r","").gsub("\n","").strip
       shoe 
     end 
+    
+    def self.scrape_under 
+      doc = Nokogiri::HTML(open("https://www.famousfootwear.com/en-US/Product/94958-1047132/Under+Armour/White_Pink/Womens+Charged+Impulse+Running+Shoe.aspx"))
+      
+      shoe = self.new 
+      shoe.name = doc.search("#ctl00_cphPageMain_BrandAndPrice1_lblDisplayName").text
+      shoe.price = doc.search("#ctl00_cphPageMain_BrandAndPrice1_ProductPrice").text.gsub("\r","").gsub("\n","").gsub(/\s+/,"")
+      shoe.availability = "In stock!"
+      shoe.description = doc.search("#ProductDescription").text.gsub("\r","").gsub("\n","").strip
+      shoe
+    end
+    
+    def self.scrape_puma1
+      doc = Nokogiri::HTML(open("https://www.famousfootwear.com/en-US/Product/95276-1047154/Puma/White_Black_Pink/Womens+Weave+Running+Shoe.aspx"))
+      
+      shoe = self.new 
+      shoe.name = doc.search("#ctl00_cphPageMain_BrandAndPrice1_lblDisplayName").text
+      shoe.price = doc.search("#ctl00_cphPageMain_BrandAndPrice1_ProductPrice").text.gsub("\r","").gsub("\n","").gsub(/\s+/,"")
+      shoe.availability = "In stock!"
+      shoe.description = doc.search("#ProductDescription").text.gsub("\r","").gsub("\n","").strip
+      shoe
+    end
+    
+    def self.scrape_nike2 
+      doc = Nokogiri::HTML(open("https://www.famousfootwear.com/en-US/Product/35400-1045396/Nike/Grey_Black_Teal/Womens+Air+Max+Motion+2+Sneaker.aspx"))
+      
+      shoe = self.new 
+      shoe.name = doc.search("#ctl00_cphPageMain_BrandAndPrice1_lblDisplayName").text
+      shoe.price = doc.search("#ctl00_cphPageMain_BrandAndPrice1_ProductPrice").text.gsub("\r","").gsub("\n","").gsub(/\s+/,"")
+      shoe.availability = "In stock!"
+      shoe.description = doc.search("#ProductDescription").text.gsub("\r","").gsub("\n","").strip
+      shoe
+    end
+    
+    
+      
 end 
 
