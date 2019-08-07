@@ -16,14 +16,15 @@ class RunningShoes::Shoes
   end 
   
   def self.scrape_altra
-    doc = Nokogiri::HTML(open("https://www.altrarunning.com/shop/women"))
-    #name = doc.search("span.product-block-name-wrapper").children.map {|name| name.text}.compact
-    #price = doc.search("#catalog-results > div:nth-child(6) > div.product-block-info.info.info-js > div.product-price.price > span").text.strip
+    doc = Nokogiri::HTML(open("https://www.altrarunning.com/shop/women/womens-escalante-2-alw1933g?variationId=220#hero=0"))
+    name = name = doc.search("#product-info > h1").text
+    #price = doc.search
     availability = true 
-    binding.pry
+    description = doc.search("#container-4 > div.swatches-product-details-container > section > div.pdp-details.product-details-section > div > div").text.strip
+    binding.pry 
     
-     
-  end
+    
+    end
   
 end 
 
