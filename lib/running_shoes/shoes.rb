@@ -1,13 +1,13 @@
 class RunningShoes::Shoes
   attr_accessor :name, :price, :availability, :url
   def self.all 
-    # Scrape Adidas and then return the shoes based on that data 
+    # Scrape Altra and then return the shoes based on that data 
     self.scrape_shoes
   end
   
   def self.scrape_shoes
     shoes = []
-    shoes << self.scrape_adidas
+    shoes << self.scrape_altra
     #got to adidas, finf the product
     #extract the properties
     #instantiate a shoe
@@ -15,8 +15,8 @@ class RunningShoes::Shoes
     shoes
   end 
   
-  def self.scrape_adidas
-    doc = Nokogiri::HTML(open("https://www.adidas.com/us/women-running-shoes"))
+  def self.scrape_altra
+    doc = Nokogiri::HTML(open("https://www.altrarunning.com/shop/women"))
     
      
   end
