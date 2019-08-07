@@ -1,5 +1,5 @@
 class RunningShoes::Shoes
-  attr_accessor :name, :price, :availability, :url
+  attr_accessor :name, :price, :availability, :description
   def self.all 
     # Scrape Altra and then return the shoes based on that data 
     self.scrape_shoes
@@ -17,7 +17,10 @@ class RunningShoes::Shoes
   
   def self.scrape_altra
     doc = Nokogiri::HTML(open("https://www.altrarunning.com/shop/women"))
-    name = doc.search("span.product-block-name-wrapper").children.map {|name| name.text}.compact
+    #name = doc.search("span.product-block-name-wrapper").children.map {|name| name.text}.compact
+    #price = doc.search("#catalog-results > div:nth-child(6) > div.product-block-info.info.info-js > div.product-price.price > span").text.strip
+    availability = true 
+    binding.pry
     
      
   end
