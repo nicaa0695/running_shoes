@@ -11,7 +11,7 @@ class RunningShoes::CLI
     puts "Take a look at these awesome running shoes:"
     @shoes = RunningShoes::Shoes.all
     @shoes.each.with_index(1) do |shoe, i|
-      puts "#{i}. #{shoe.name} - #{shoe.feature} - #{shoe.availability} - #{the_shoe.desrciption}" 
+      puts "#{i}. #{shoe.name} - #{shoe.feature} - #{shoe.availability}" 
     end
       
   end
@@ -23,7 +23,7 @@ class RunningShoes::CLI
       input = gets.strip.downcase
       if input.to_i > 0 
         the_shoe = @shoes[input.to_i-1]
-        puts "#{the_shoe.name} - #{the_shoe.feature} - #{the_shoe.availability} - #{the_shoe.description}"
+        puts "#{the_shoe.name} - #{the_shoe.feature} - #{the_shoe.availability}"
         elsif input == "list"
           list_shoes
         else 
