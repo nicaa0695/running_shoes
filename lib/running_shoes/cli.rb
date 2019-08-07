@@ -18,7 +18,7 @@ class RunningShoes::CLI
   end
   
   def menu
-    puts "Enter the number of the shoe you want more information about or type list to see the shoes again or type exit:"
+    puts "Enter the number of the shoe you would like more information about or type list to see the shoes again or type exit:"
     input = nil 
     while input != "exit"
       input = gets.strip.downcase
@@ -26,9 +26,7 @@ class RunningShoes::CLI
         the_shoe = @shoes[input.to_i-1]
         puts "#{the_shoe.name} - #{the_shoe.price} - #{the_shoe.availability} - #{the_shoe.description}"
         elsif input == "list"
-          list_shoes
-        else 
-          puts "Please type list or exit."
+          list_shoes 
       end
     end 
   end
