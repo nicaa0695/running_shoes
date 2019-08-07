@@ -1,9 +1,6 @@
-Hello World!
 # RunningShoes
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/running_shoes`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Hello, this CLI gem allows you to look at a list of running shoes. If you'd like more information about a specific pair of shoes, you can type 1-10 to select the shoe you're interested in. You can also type 'list' to see the list again or 'exit' to exit the program.
 
 ## Installation
 
@@ -23,8 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
-#TODO: Write usage instructions here
-
+Start program with "./bin/running-shoes"
+Select a pair of shoes by typing 1-10.
+Type 'list' to see the list again.
+Type 'exit' to exit the program.
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -33,7 +32,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/'darling-paradigm-8865'/running_shoes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at
+https://github.com/'nicaa0695'/running_shoes or
+https://github.com/'darling-paradigm-8865'/running_shoes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
