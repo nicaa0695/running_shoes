@@ -17,6 +17,7 @@ class RunningShoes::Shoes
   
   def self.scrape_altra
     doc = Nokogiri::HTML(open("https://www.altrarunning.com/shop/women"))
+    binding.pry
     
      
   end
