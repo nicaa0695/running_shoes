@@ -11,7 +11,8 @@ class RunningShoes::CLI
     puts "Take a look at these awesome running shoes:"
     @shoes = RunningShoes::Shoes.all
     @shoes.each.with_index(1) do |shoe, i|
-      puts "#{i}. #{shoe.name} - #{shoe.price} - #{shoe.availability} - #{shoe.description}" 
+      puts "#{i}. #{shoe.name}"
+      #puts "#{i}. #{shoe.name} - #{shoe.price} - #{shoe.availability} - #{shoe.description}" 
     end
       
   end
@@ -27,7 +28,7 @@ class RunningShoes::CLI
         elsif input == "list"
           list_shoes
         else 
-          puts "Input does not exist, please type list or exit."
+          puts "Please type list or exit."
       end
     end 
   end
