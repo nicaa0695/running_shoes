@@ -15,6 +15,8 @@ class RunningShoes::Shoes
     shoes << self.scrape_asics
     shoes << self.scrape_under
     shoes << self.scrape_puma1
+    shoes << self.scrape_nike2
+    shoes << self.scrape_adidas2
     shoes
   end 
   
@@ -117,7 +119,15 @@ class RunningShoes::Shoes
       shoe
     end
     
-    
+    def self.scrape_adidas2 
+      doc = Nokogiri::HTML(open("https://www.famousfootwear.com/en-US/Product/94895-1045208/adidas/Maroon/Womens+Lite+Racer+RBN+Sneaker.aspx"))
       
-end 
+      shoe = self.new 
+      shoe.name = doc.search("#ctl00_cphPageMain_BrandAndPrice1_lblDisplayName").text
+      shoe.price = doc.search("#ctl00_cphPageMain_BrandAndPrice1_ProductPrice").text.gsub("\r","").gsub("\n","").gsub(/\s+/,"")
+      shoe.availability = "In stock!"
+      shoe.description = doc.search("#ProductDescription").text.gsub("\r","").gsub("\n","").strip
+      shoe
+    end
+  end 
 
