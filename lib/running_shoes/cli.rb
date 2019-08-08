@@ -8,17 +8,17 @@ class RunningShoes::CLI
   end
   
   def list_shoes
-    puts "Take a look at these awesome running shoes:".colorize(:purple)
+    puts "Take a look at these awesome running shoes:".colorize(:yellow).underline
     @shoes = RunningShoes::Shoes.all
     @shoes.each.with_index(1) do |shoe, i|
-      puts "#{i}. #{shoe.name}".colorize(:blue)
+      puts "#{i}. #{shoe.name}".colorize(:cyan).bold
       #puts "#{i}. #{shoe.name} - #{shoe.price} - #{shoe.availability} - #{shoe.description}" 
     end
       
   end
   
   def menu
-    puts "Enter the number (1-10) of the shoe you would like more information about, type 'list' to see the shoes again or type 'exit'.".colorize(:orange)
+    puts "Enter the number (1-10) of the shoe you would like more information about, type 'list' to see the shoes again or type 'exit'.".colorize(:yellow).underline
     input = nil 
     while input != "exit"
       input = gets.strip.downcase
@@ -31,6 +31,6 @@ class RunningShoes::CLI
     end 
   end
   def goodbye
-    puts "See you soon, during your next shopping spree!".colorize(:yellow)
+    puts "See you soon, during your next shopping spree!".colorize(:red).bold
   end 
 end
