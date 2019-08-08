@@ -23,7 +23,7 @@ class RunningShoes::CLI
       if input.to_i > 0 
         the_shoe = RunningShoes::Shoes.all[input.to_i-1]
         the_shoe.scrape unless the_shoe.scraped
-        puts "#{the_shoe.name.strip.colorize(:white).bold} - #{the_shoe.price.colorize(:white).underline} - #{the_shoe.availability.colorize(:green)} - #{the_shoe.description.colorize(:light_blue)}"
+        puts "#{the_shoe.name.strip.colorize(:white).bold} - #{the_shoe.price.colorize(:yellow).underline} - #{the_shoe.availability.colorize(:green)} - #{the_shoe.description.colorize(:light_blue)} -> #{the_shoe.url.colorize(:green)}"
         elsif input == "list"
           list_shoes 
       end

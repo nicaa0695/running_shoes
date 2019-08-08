@@ -1,6 +1,6 @@
 # RunningShoes
 
-Hello, this CLI gem allows you to look at a list of running shoes. If you'd like more information about a specific pair of shoes, you can type 1-10 to select the shoe you're interested in. You can also type 'list' to see the list again or 'exit' to exit the program.
+Hello, this CLI gem allows you to look at a list of running shoes. If you'd like more information about a specific pair of shoes, you can type 1-96 to select the shoe you're interested in. You can also type 'list' to see the list again or 'exit' to exit the program.
 
 ## Installation
 
@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 Start program with "./bin/running-shoes"
-Select a pair of shoes by typing 1-10.
+Select a pair of shoes by typing 1-96.
 Type 'list' to see the list again.
 Type 'exit' to exit the program.
 ## Development
