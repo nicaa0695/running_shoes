@@ -18,13 +18,13 @@ class RunningShoes::CLI
   end
   
   def menu
-    puts "Enter the number (1-10) of the shoe you would like more information about, type 'list' to see the shoes again or type 'exit'.".colorize(:yellow).underline
+    puts "Enter the number (1-10) of the shoe you would like more information about, type 'list' to see the shoes again or type 'exit'.".colorize(:green).underline
     input = nil 
     while input != "exit"
       input = gets.strip.downcase
       if input.to_i > 0 
         the_shoe = @shoes[input.to_i-1]
-        puts "#{the_shoe.name} - #{the_shoe.price} - #{the_shoe.availability} - #{the_shoe.description}"
+        puts "#{the_shoe.name} - #{the_shoe.price} - #{the_shoe.availability} - #{the_shoe.description}".colorize(:cyan)
         elsif input == "list"
           list_shoes 
       end
