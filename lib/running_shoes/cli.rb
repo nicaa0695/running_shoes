@@ -1,4 +1,3 @@
-#CLI Controller/User Interactions
 class RunningShoes::CLI
   
   def call 
@@ -18,7 +17,7 @@ class RunningShoes::CLI
   end
   
   def menu
-    puts "Enter the number of the shoe you would like more information about or type list to see the shoes again or type exit:"
+    puts "Enter the number (1-10) of the shoe you would like more information about, type 'list' to see the shoes again or type 'exit'."
     input = nil 
     while input != "exit"
       input = gets.strip.downcase
