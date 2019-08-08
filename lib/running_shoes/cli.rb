@@ -24,7 +24,7 @@ class RunningShoes::CLI
       input = gets.strip.downcase
       if input.to_i > 0 
         the_shoe = @shoes[input.to_i-1]
-        puts "#{the_shoe.name} - #{the_shoe.price} - #{the_shoe.availability} - #{the_shoe.description}".colorize(:cyan)
+        puts "#{the_shoe.name.colorize(:white).bold} - #{the_shoe.price.colorize(:yellow).underline} - #{the_shoe.availability.colorize(:green)} - #{the_shoe.description.colorize(:light_blue)}"
         elsif input == "list"
           list_shoes 
       end
