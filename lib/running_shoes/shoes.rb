@@ -28,8 +28,8 @@ class RunningShoes::Shoes
     shoe_cards = doc.css('.productCellWrapper')
     shoe_cards.each do |shoe_card|
       shoe = self.new
-      shoe.name = shoe_card.css('span.').text
-      shoe.price = ''
+      shoe.name = shoe_card.css('span.styleName.name').text
+      shoe.price = shoe_card.css('span.variantPrice').text 
       shoe.url = "https://www.famousfootwear.com/#{shoe_card.css('a').attr('href').text}"
     end
   end
