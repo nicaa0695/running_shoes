@@ -10,13 +10,11 @@ class RunningShoes::Shoes
   
   def scrape
     doc = Nokogiri::HTML(open(self.url))
-      
-  #     shoe.name = doc.search("#ctl00_cphPageMain_BrandAndPrice1_lblDisplayName").text
-  #     shoe.price = doc.search("#ctl00_cphPageMain_BrandAndPrice1_ProductPrice").text.gsub("\r","").gsub("\n","").gsub(/\s+/,"")
-       self.availability = "In stock!"
-       self.description = doc.search("#ProductDescription").text.gsub("\r","").gsub("\n","").strip
-       self
+      self.availability = "In stock!"
+      self.description = doc.search("#ProductDescription").text.gsub("\r","").gsub("\n","").strip
+      self
   end
+  
   def self.all 
     self.scrape_all if @@all.empty?
     @@all
