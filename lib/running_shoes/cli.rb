@@ -12,7 +12,6 @@ class RunningShoes::CLI
     @shoes = RunningShoes::Shoes.all
     @shoes.each.with_index(1) do |shoe, i|
       puts "#{i}. #{shoe.name}".colorize(:white).bold
-      #puts "#{i}. #{shoe.name} - #{shoe.price} - #{shoe.availability} - #{shoe.description}" 
     end
       
   end

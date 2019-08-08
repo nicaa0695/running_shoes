@@ -1,7 +1,6 @@
 class RunningShoes::Shoes
   attr_accessor :name, :price, :availability, :description
   def self.all 
-    # Scrape Altra and then return the shoes based on that data 
     self.scrape_shoes
   end
   
