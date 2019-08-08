@@ -1,3 +1,4 @@
+require 'colorize'
 class RunningShoes::CLI
   
   def call 
@@ -7,17 +8,17 @@ class RunningShoes::CLI
   end
   
   def list_shoes
-    puts "Take a look at these awesome running shoes:"
+    puts "Take a look at these awesome running shoes:".colorize(:green)
     @shoes = RunningShoes::Shoes.all
     @shoes.each.with_index(1) do |shoe, i|
-      puts "#{i}. #{shoe.name}"
+      puts "#{i}. #{shoe.name}".colorize(:blue)
       #puts "#{i}. #{shoe.name} - #{shoe.price} - #{shoe.availability} - #{shoe.description}" 
     end
       
   end
   
   def menu
-    puts "Enter the number (1-10) of the shoe you would like more information about, type 'list' to see the shoes again or type 'exit'."
+    puts "Enter the number (1-10) of the shoe you would like more information about, type 'list' to see the shoes again or type 'exit'.".colorize(:orange)
     input = nil 
     while input != "exit"
       input = gets.strip.downcase
@@ -30,6 +31,6 @@ class RunningShoes::CLI
     end 
   end
   def goodbye
-    puts "See you soon, during your next shopping spree!"
+    puts "See you soon, during your next shopping spree!".colorize(:yellow)
   end 
 end
