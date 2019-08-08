@@ -8,7 +8,7 @@ class RunningShoes::CLI
   end
   
   def list_shoes
-    puts "Take a look at these awesome running shoes:".colorize(:green)
+    puts "Take a look at these awesome running shoes:".colorize(:purple)
     @shoes = RunningShoes::Shoes.all
     @shoes.each.with_index(1) do |shoe, i|
       puts "#{i}. #{shoe.name}".colorize(:blue)
