@@ -1,3 +1,4 @@
+require_relative './scraper.rb'
 class RunningShoes::Shoes
   attr_accessor :name, :price, :availability, :description, :url
   attr_reader :scraped
