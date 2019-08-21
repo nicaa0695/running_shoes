@@ -7,6 +7,11 @@ class RunningShoes::Scraper
       self
   end
   
+  def self.all 
+    self.scrape_all if @@all.empty?
+    @@all
+  end
+  
   def self.scrape_all
     doc = Nokogiri::HTML(open("https://www.famousfootwear.com/en-US/Womens/_/_/Athletic+Shoes~Running+Shoes~Lifestyle/_/Products.aspx"))
     shoe_cards = doc.css('.productCellWrapper')
