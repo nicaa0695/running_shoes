@@ -19,6 +19,8 @@ class RunningShoes::Scraper
     end
   end
   
+  
+  
 end 
 
   

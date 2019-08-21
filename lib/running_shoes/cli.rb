@@ -26,6 +26,8 @@ class RunningShoes::CLI
         puts "#{the_shoe.name.strip.colorize(:white).bold} - #{the_shoe.price.colorize(:magenta).underline} - #{the_shoe.availability.colorize(:green)} - #{the_shoe.description.colorize(:light_blue)} -> #{the_shoe.url.colorize(:green).underline}"
         elsif input == "list"
           list_shoes 
+        else
+          puts "Not sure what you mean, please type list or exit.".colorize(:red).bold
       end
     end 
   end
