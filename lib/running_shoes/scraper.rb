@@ -19,6 +19,14 @@ class RunningShoes::Scraper
     end
   end
   
+  # def self.scrape_shoe(shoe)
+  #   doc = Nokogiri::HTML(open(shoe.url))
+  #     shoe.description = doc.search("#ProductDescription").text.gsub("\r","").gsub("\n","").strip
+  #     shoe.name = shoe_card.css('span.styleName.name').text
+  #     shoe.price = shoe_card.css('span.variantPrice').text 
+  #     shoe.availability = "In stock!"
+  #     shoe.url = "https://www.famousfootwear.com/#{shoe_card.css('a').attr('href').text}"
+  # end
   
   
 end 
