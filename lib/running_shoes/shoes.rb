@@ -3,9 +3,7 @@ class RunningShoes::Shoes
   attr_accessor :name, :price, :availability, :description, :url
   attr_reader :scraped
   
-  @@all = []
   def initialize
-    @@all << self
     @scraped = false
   end
   
@@ -16,8 +14,7 @@ class RunningShoes::Shoes
   # end
   
   def self.all 
-    RunningShoes::Scraper.scrape_all if @@all.empty?
-    @@all
+    @@all ||= RunningShoes::Scraper.scrape_all
     #self.scrape_shoes
   end
   
