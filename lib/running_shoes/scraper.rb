@@ -1,11 +1,14 @@
 require_relative './shoes.rb'
 class RunningShoes::Scraper
+  attr_accessor :name, :price, :availability, :description, :url
+  attr_reader :scraped
   
   def scrape
     doc = Nokogiri::HTML(open(self.url))
       self.description = doc.search("#ProductDescription").text.gsub("\r","").gsub("\n","").strip
       self
   end
+  
   
   def self.all 
     self.scrape_all if @@all.empty?

@@ -15,11 +15,11 @@ class RunningShoes::Shoes
   #     self
   # end
   
-  # def self.all 
-  #   self.scrape_all if @@all.empty?
-  #   @@all
-  #   #self.scrape_shoes
-  # end
+  def self.all 
+    RunningShoes::Scraper.scrape_all if @@all.empty?
+    @@all
+    #self.scrape_shoes
+  end
   
   # def self.scrape_all
   #   doc = Nokogiri::HTML(open("https://www.famousfootwear.com/en-US/Womens/_/_/Athletic+Shoes~Running+Shoes~Lifestyle/_/Products.aspx"))
